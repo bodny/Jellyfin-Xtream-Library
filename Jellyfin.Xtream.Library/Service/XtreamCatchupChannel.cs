@@ -401,7 +401,7 @@ public class XtreamCatchupChannel : IChannel, IDisableMediaSourceDisplay, IRequi
 
         var (from, to) = CatchupPlanner.DayWindowUtc(reference.DaysAgo, zone, now);
         var horizon = CatchupPlanner.ArchiveHorizonUtc(days, zone, now);
-        var selected = CatchupPlanner.ProgrammesInWindow(programmes, from, to, now, horizon);
+        var selected = CatchupPlanner.ProgrammesInWindow(programmes, from, to, now, horizon, config.ShowInProgressCatchup);
 
         var entries = selected.Select(programme =>
         {
