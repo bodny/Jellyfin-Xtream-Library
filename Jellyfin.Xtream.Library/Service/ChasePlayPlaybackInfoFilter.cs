@@ -54,7 +54,6 @@ public class ChasePlayPlaybackInfoFilter : IAsyncResultFilter
                 source.TranscodingSubProtocol = MediaStreamProtocol.hls;
                 source.TranscodingContainer = "mp4";
                 source.TranscodingUrl = $"/XtreamLibrary/ChasePlay/{source.Id}/master.m3u8";
-                source.RunTimeTicks = null;
             }
         }
 
